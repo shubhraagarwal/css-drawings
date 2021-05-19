@@ -1,34 +1,55 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height : 90vh;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: bisque;
 }
 
-:root{
-    --primary : #fff; 
+:root {
+  --primary: #fff;
 }
 
-
-
-.keyboard{
-    background-color: rgb(54, 50, 50);
-    height: 50vh;
-    width: 70vw;
-    display: flex;
+.keyboard {
+  background-color: rgb(54, 50, 50);
+  height: 50vh;
+  width: 70vw;
+  display: flex;
 }
 
-.key{
-    height: 2rem;
-    width: 2.3rem;
-    color: var(--primary);
-    background-color: black;
-    display: flex;
-    margin: .6rem;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
+.gradient {
+  background: linear-gradient(
+    to right,
+    #000 20%,
+    #bada55 30%,
+    #bada44 70%,
+    #000 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 7s ease-in-out infinite alternate;
 }
-.margin{
-    margin-left: 3rem;
+
+@keyframes textShine {
+  to {
+    background-position: 200%;
+  }
+}
+
+.key {
+  height: 2rem;
+  width: 2.3rem;
+  color: var(--primary);
+  background-color: black;
+  display: flex;
+  margin: 0.6rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.24);
+}
+.margin {
+  margin-left: 3rem;
 }
